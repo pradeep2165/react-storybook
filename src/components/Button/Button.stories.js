@@ -18,3 +18,22 @@ export const Success = () => {
 export const Danger = () => {
   return <Button variant="danger"> Danger </Button>;
 };
+
+const Templete = (args) => <Button {...args} />;
+export const PrimaryA = Templete.bind();
+
+PrimaryA.args = {
+  variant: "primary",
+  children: "Primary Args",
+};
+
+export const LongSecondaryA = Templete.bind();
+LongSecondaryA.args = {
+  ...PrimaryA.args,
+  children: "Long Secondary Args",
+};
+export const SecondaryA = Templete.bind();
+SecondaryA.args = {
+  variant: "secondary",
+  children: "Secondary Args",
+};

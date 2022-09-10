@@ -2,7 +2,7 @@ import { addDecorator } from "@storybook/react";
 import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
 import React from "react";
-
+import "@storybook/addon-console";
 // addDecorator((story) => (
 //   <ThemeProvider theme={theme}>
 //     <CSSReset />

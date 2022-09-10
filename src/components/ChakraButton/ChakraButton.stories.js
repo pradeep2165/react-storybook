@@ -21,3 +21,10 @@ export const Danger = () => {
     </Button>
   );
 };
+export const Log = () => {
+  return (
+    <Button colorScheme="blue" onClick={() => console.log("Button Clicked")}>
+      Log
+    </Button>
+  );
+};

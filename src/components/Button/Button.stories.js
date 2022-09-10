@@ -4,6 +4,9 @@ import Button from "./Button";
 export default {
   title: "Form/Button",
   component: Button,
+  args: {
+    children: "Button",
+  },
 };
 
 export const Primary = () => {
@@ -24,16 +27,16 @@ export const PrimaryA = Templete.bind();
 
 PrimaryA.args = {
   variant: "primary",
-  children: "Primary Args",
+  // children: "Primary Args",
 };
 
 export const LongSecondaryA = Templete.bind();
 LongSecondaryA.args = {
   ...PrimaryA.args,
-  children: "Long Secondary Args",
+  // children: "Long Secondary Args",
 };
 export const SecondaryA = Templete.bind();
 SecondaryA.args = {
   variant: "secondary",
-  children: "Secondary Args",
+  // children: "Secondary Args",
 };

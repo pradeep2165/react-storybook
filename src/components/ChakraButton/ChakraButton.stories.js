@@ -24,7 +24,7 @@ export const Danger = () => {
 };
 export const Log = () => {
   return (
-    <Button colorScheme="blue" onClick={() => console.log("Button Clicked")}>
+    <Button colorScheme="blue" onClick={() => console.log("Button Clicked", process.env.STORYBOOK_THEME)}>
       Log
     </Button>
   );

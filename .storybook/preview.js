@@ -1,9 +1,10 @@
-import { addDecorator } from "@storybook/react";
+import { addDecorator, addParameters } from "@storybook/react";
 import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
 import React from "react";
 import { withConsole } from "@storybook/addon-console";
 import { withKnobs } from "@storybook/addon-knobs";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 addDecorator(withKnobs);
@@ -30,3 +31,9 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+addParameters({
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
+});

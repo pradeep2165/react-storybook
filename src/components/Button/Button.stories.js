@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "./Button";
-
+import Center from "../Center/Center";
 export default {
   title: "Form/Button",
   component: Button,
-  args: {
-    children: "Button",
-  },
+  decorators: [(story) => <Center>{story()}</Center>],
+  // args: {
+  //   children: "Button",
+  // },
 };
 
 export const Primary = () => {
@@ -22,21 +23,21 @@ export const Danger = () => {
   return <Button variant="danger"> Danger </Button>;
 };
 
-const Templete = (args) => <Button {...args} />;
-export const PrimaryA = Templete.bind();
+// const Templete = (args) => <Button {...args} />;
+// export const PrimaryA = Templete.bind();
 
-PrimaryA.args = {
-  variant: "primary",
-  // children: "Primary Args",
-};
+// PrimaryA.args = {
+//   variant: "primary",
+//   children: "Primary Args",
+// };
 
-export const LongSecondaryA = Templete.bind();
-LongSecondaryA.args = {
-  ...PrimaryA.args,
-  // children: "Long Secondary Args",
-};
-export const SecondaryA = Templete.bind();
-SecondaryA.args = {
-  variant: "secondary",
-  // children: "Secondary Args",
-};
+// export const LongSecondaryA = Templete.bind();
+// LongSecondaryA.args = {
+//   ...PrimaryA.args,
+//   children: "Long Secondary Args",
+// };
+// export const SecondaryA = Templete.bind();
+// SecondaryA.args = {
+//   variant: "secondary",
+//   children: "Secondary Args",
+// };

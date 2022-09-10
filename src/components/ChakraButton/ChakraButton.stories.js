@@ -4,11 +4,24 @@ import { Button } from "@chakra-ui/react";
 export default {
   title: "Chakra/Button",
   component: Button,
+  argTypes: {
+    onClick: { action: "clicked" },
+  },
 };
 
-export const Success = () => {
-  return <Button colorScheme="blue">Success</Button>;
+const Templete = (args) => <Button {...args} />;
+export const Success = Templete.bind();
+
+Success.args = {
+  colorScheme: "teal",
+  variant: "solid",
+  children: "Success",
 };
-export const Danger = () => {
-  return <Button colorScheme="red">Danger</Button>;
+
+export const Danger = Templete.bind();
+
+Danger.args = {
+  colorScheme: "red",
+  variant: "solid",
+  children: "Danger",
 };

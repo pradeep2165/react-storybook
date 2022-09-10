@@ -3,8 +3,10 @@ import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
 import React from "react";
 import { withConsole } from "@storybook/addon-console";
+import { withKnobs } from "@storybook/addon-knobs";
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+addDecorator(withKnobs);
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {

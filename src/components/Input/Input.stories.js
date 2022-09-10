@@ -15,3 +15,6 @@ export const Medium = () => {
 export const Large = () => {
   return <Input size="large" placeholder="large text" />;
 };
+
+//for renameing story
+Small.storyName = "Small Story";

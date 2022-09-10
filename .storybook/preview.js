@@ -3,12 +3,12 @@ import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
 import React from "react";
 
-addDecorator((story) => (
-  <ThemeProvider theme={theme}>
-    <CSSReset />
-    <Box m="4">{story()}</Box>
-  </ThemeProvider>
-));
+// addDecorator((story) => (
+//   <ThemeProvider theme={theme}>
+//     <CSSReset />
+//     <Box m="4">{story()}</Box>
+//   </ThemeProvider>
+// ));
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
@@ -22,13 +22,13 @@ export const parameters = {
   },
 };
 
-// export const decorators = [
-//   (Story) => (
-//     <ThemeProvider theme={theme}>
-//       <CSSReset />
-//       <Box m="4">
-//         <Story />
-//       </Box>
-//     </ThemeProvider>
-//   ),
-// ];
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m="4">
+        <Story />
+      </Box>
+    </ThemeProvider>
+  ),
+];

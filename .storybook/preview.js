@@ -1,6 +1,7 @@
 import { addDecorator } from "@storybook/react";
 import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
+import React from "react";
 
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
@@ -20,3 +21,14 @@ export const parameters = {
     },
   },
 };
+
+// export const decorators = [
+//   (Story) => (
+//     <ThemeProvider theme={theme}>
+//       <CSSReset />
+//       <Box m="4">
+//         <Story />
+//       </Box>
+//     </ThemeProvider>
+//   ),
+// ];

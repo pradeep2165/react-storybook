@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@charka-ui/core";
+import { Button } from "@chakra-ui/react";
 
 export default {
   title: "Chakra/Button",
@@ -7,8 +7,8 @@ export default {
 };
 
 export const Success = () => {
-  return <Button variantColor="green">Success</Button>;
+  return <Button colorScheme="blue">Success</Button>;
 };
 export const Danger = () => {
-  return <Button variantColor="red">Danger</Button>;
+  return <Button colorScheme="red">Danger</Button>;
 };

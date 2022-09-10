@@ -2,13 +2,9 @@ import { addDecorator } from "@storybook/react";
 import Center from "../src/components/Center/Center";
 import { theme, CSSReset, ThemeProvider, Box } from "@chakra-ui/react";
 import React from "react";
-import "@storybook/addon-console";
-// addDecorator((story) => (
-//   <ThemeProvider theme={theme}>
-//     <CSSReset />
-//     <Box m="4">{story()}</Box>
-//   </ThemeProvider>
-// ));
+import { withConsole } from "@storybook/addon-console";
+
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
